@@ -6,8 +6,8 @@ import java.util.Map;
 public class MergeMethod {
 
     public static void main(String[] args) {
-      //  addNewValue();
-      //  removeValue();
+        addNewValue();
+        removeValue();
         calculateValueValue();
     }
 
