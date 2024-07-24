@@ -1,0 +1,16 @@
+@startuml
+skinparam backgroundColor #F5F5F5
+start
+#MediumSpringGreen:if (Key exists?) then (yes)
+  #MediumSpringGreen:Get existing value;
+  #MediumSpringGreen:Apply remappingFunction(existingValue, newValue);
+  #MediumSpringGreen:if (remappingFunction result) then (not null)
+    #MediumSpringGreen: Update the value associated with\nthe specified key using result from\n             mapping function;
+  else (null)
+    :Remove entry;
+  endif
+else (no)
+ :Add to the map a new entry\n     key and value specified\n  as the first two arguments;
+endif
+stop
+@enduml

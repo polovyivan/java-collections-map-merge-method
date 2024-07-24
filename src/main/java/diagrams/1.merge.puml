@@ -1,0 +1,17 @@
+@startuml
+skinparam backgroundColor #F5F5F5
+start
+if (Key exists?) then (yes)
+  :Get existing value;
+  :Apply remappingFunction(existingValue, newValue);
+  if (remappingFunction result) then (not null)
+    : Update the value associated with\nthe specified key using result from\n             mapping function;
+  else (null)
+    :Remove entry;
+  endif
+else (no)
+ :Add to the map a new entry\n     key and value specified\n  as the first two arguments;
+endif
+stop
+@enduml
+
